@@ -1,8 +1,8 @@
 export default {
   async fetch(request, env, ctx) {
     // Serve test.html on root request
-    if (new URL(request.url).pathname === "/" || new URL(request.url).pathname === "/trustbridge_website.html") {
-      return new Response(await (await fetch("https://raw.githubusercontent.com/smondal213/demo/main/trustbridge_website.html")).text(), {
+    if (new URL(request.url).pathname === "/" || new URL(request.url).pathname === "/test.html") {
+      return new Response(await (await fetch("https://raw.githubusercontent.com/smondal213/demo/main/test.html")).text(), {
         headers: { "Content-Type": "text/html; charset=utf-8" },
       });
     }
